@@ -34,7 +34,11 @@ const addColleague = (user) => {
 <template>
   <div class="p-6">
     <h1 class="text-2xl font-bold mb-4">Available Colleagues</h1>
-    <transition-group name="fade" tag="div" class="grid grid-cols-2 gap-4">
+    <transition-group
+      name="fade"
+      tag="div"
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+    >
       <UserCard
         v-for="user in availableColleagues"
         :key="user.name"
@@ -44,7 +48,11 @@ const addColleague = (user) => {
     </transition-group>
 
     <h1 class="text-2xl font-bold mt-8 mb-4">Selected Colleagues</h1>
-    <transition-group name="slide" tag="div" class="grid grid-cols-2 gap-4">
+    <transition-group
+      name="slide"
+      tag="div"
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+    >
       <UserCard
         v-for="user in selectedColleagues"
         :key="user.name"
